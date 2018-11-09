@@ -23,7 +23,7 @@ public class EmployeeController {
 	@GetMapping(path = "/viewall")
 	public List<Employee> getEmployee()
 	{
-		//All Employere
+		//All Employere details
 		List<Employee> eList = new ArrayList<Employee>();
 		eList.add(new Employee("8043652", "Sanjib", "sanjivsworld66@gmail.com"));
 		eList.add(new Employee("8043653", "John", "JohnyS66@gmail.com"));
