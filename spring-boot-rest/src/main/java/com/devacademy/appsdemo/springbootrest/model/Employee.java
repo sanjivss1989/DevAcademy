@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
 /**
  * @author server
@@ -24,6 +25,7 @@ public class Employee {
 	private Long id;
 	
 	@Column(name = "NAME")
+	@Size(min= 2 ,message = "Name should have at lease 2 characters")
 	private String name;
     
 	@Column(name = "SALARY")
