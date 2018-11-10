@@ -45,8 +45,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		Optional<Employee> optional = empRepo.findById(id);
 		Employee emp = optional.get();
 		return emp;
-		
-	}
+		}
 
 	@Override
 	public void updateEmployee(Employee emp) {
