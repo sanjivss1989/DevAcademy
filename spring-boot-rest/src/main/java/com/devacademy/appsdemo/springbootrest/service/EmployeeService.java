@@ -13,7 +13,7 @@ import com.devacademy.appsdemo.springbootrest.model.Employee;
  */
 public interface EmployeeService {
 	
-	public void saveEmployee(Employee emp);
+	public Employee saveEmployee(Employee emp);
 	
 	public List<Employee> retrieveEmployees();
 	

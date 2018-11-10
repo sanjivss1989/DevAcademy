@@ -25,9 +25,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 	EmployeeRepository empRepo;
 
 	@Override
-	public void saveEmployee(Employee emp) {
+	public Employee saveEmployee(Employee emp) {
 		// TODO Auto-generated method stub
-		empRepo.save(emp);
+		Employee emp1 = empRepo.save(emp);
+		return emp1;
 	}
 
 	@Override

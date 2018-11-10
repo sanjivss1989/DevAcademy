@@ -3,9 +3,11 @@
  */
 package com.devacademy.appsdemo.springbootrest.controller;
 
+import java.net.URI;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.devacademy.appsdemo.springbootrest.model.Employee;
 import com.devacademy.appsdemo.springbootrest.service.EmployeeService;
@@ -28,9 +31,16 @@ public class EmployeeController {
 	EmployeeService empService;
 
 	@PostMapping(path = "/api/save")
-	public void saveEmployee(Employee emp)
+	public ResponseEntity<Object> saveEmployee(Employee emp)
 	{
-		empService.saveEmployee(emp);
+		Employee emp1 = empService.saveEmployee(emp);
+		URI location = ServletUriComponentsBuilder
+		.fromCurrentRequest()
+		.path("/{id}")
+		.buildAndExpand(emp1.getId())
+		.toUri();
+		
+		return ResponseEntity.created(location).build();
 	}
 	
 	@GetMapping(path = "api/viewall")
