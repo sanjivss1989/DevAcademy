@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.devacademy.appsdemo.springbootrest.exceptions.EmployeeNotFoundException;
 import com.devacademy.appsdemo.springbootrest.model.Employee;
 import com.devacademy.appsdemo.springbootrest.service.EmployeeService;
 
@@ -53,7 +54,13 @@ public class EmployeeController {
 	@GetMapping(path = "/api/get/{id}")
 	public Employee getEmployee(@PathVariable(name = "id")Long id)
 	{
-		return empService.getEmployee(id);
+		Employee emp = empService.getEmployee(id);
+		if(emp == null)
+			
+		{
+			throw new EmployeeNotFoundException("Employee with id ==> "+id+"was not found in database");
+		}
+		return emp;
 	}
 	
 	@PutMapping(path = "/api/update/{id}")
