@@ -1,0 +1,168 @@
+Core Java Concepts
+
+#Multithreading 
+
+1)  What is Multithreading and multitasking - 
+
+  Multithreading is a technique to execute multiple threads simulatneously. Both multiprocessing and multithreading is used to achieve multitasking.
+
+2)  Difference between thread and process
+    
+    a) Thread have a shared memory area while process does not. Thread do not allocate separate memory areas unlike process and hence saves a lot of space.
+
+    b) Context Switching between thread is easier than process and takes less amount of time.
+
+    
+
+
+3)  Thread Life Cycle
+
+        A Thread has 5 stages in its life cycle
+            
+                       (i)  New : A thread is in new state when you have created an instance of Thread Class
+                       (ii) Runnable: A thread is runnable when it is prepared and ready for execution.
+                       (iii) Running : When thread is under progress.
+                       (iv) Blocked: When running thread is blocked due to some other process.
+                       (v) Dead: When thread finished its execution it goes into dead state.
+
+
+4)  wait, notify and notifyAll method
+
+              (i) Wait() method : This method is defined in Object's class and it halts a thread until a notify() method is called from other thread.
+
+              (ii) Notify() method : This method notifies and awakens other thread which is on wait state.
+
+              (iii) NotifyAll() method : This method notifies all running threads which were on wait state.
+
+
+
+
+       
+5)  what is the difference between sleep and wait method?
+
+                 (i)  Sleep() method is defined in Thread class while wait() method is defined in Object class.
+                 (ii) Sleep method is a static method which introduces a delay in current running thread while wait is used for inter thread communication and it release the lock on the shared object.
+
+
+
+6)  What is synchronization and types? why block and keyword? Deadlock and write code for it
+
+              # Synchronization is a concept through which we restrict multiple threads accessing a shared object or piece of code.
+
+                     (a) Through Synchronized Keyword
+                     (b) Through Synchronized Block.
+
+                There is an associated performance overhead when using synchronized context. If the entire method need not be synchronized then a particular block within the method can be done.
+
+
+              # Types of Synchronization:
+
+                     (a) Instance Level Synchronization :
+                         In non static synchronization, the monitor/lock is acquired on an instance and memory is allocated multiple times while executing the method
+
+                     (b) Class Level Synchronization:
+                        Suppose we have a shared Class Account and we have 2 instances obj1 and obj2. Generally in non static synchronization there will be a common lock
+                        between thread t1 and t2 accesing obj1 and between thread t3 and t4 accessing obj2. But there can be interference between t1 and t3 or t2 and t4.
+                        So if we declare the method as static, only 1 single lock would be there and that too on Class level. This is called static synchronization.
+
+
+                
+               #Deadlock :
+
+                    (a) Deadlock is a condition 
+
+               
+7)  Why wait method is called within synchronized context?
+8)  Difference between Runnable and Thread class?
+
+                     (i) Runnable is an interface and Thread is a concrete class.
+                     (ii) Runnable is more flexible than Thread because multiple inheritance is not supported in Java.
+
+
+9)  Thread class - join() method, yield() method
+
+                         
+
+              (a) join() method is used to instruct another thread to wait until the currently executing thread finishes execution
+                  Let us consider 2 thread t1 and t2. if t2 calls join method the thread t1 will start only when t2 is finished.
+
+              (b) yield() method is used to temporarily halt the current thread and give control to another thread to finish execution and then the previous thread will resume.
+
+
+10) Thread Schedulers and priority
+                    
+(i) Thread Scheduling is based on JVM implementation and no guarantee which one will get priority.
+
+(ii) In Preemptive scheduling, the highest priority thread will execute first and may be paused if another higher priority thread comes into scene.
+
+(iii) Time Slicing: A thread will be executed in predefines slices of time and reenters pool of ready tasks.
+
+
+11) What is Daemon Thread?
+12) What is Thread Pool? Advantages of Thread pool? Disadvantages of thread pool
+13) Executor Services framework
+14) Future and callable? Difference between Runnable and Callable? Completable Future
+15) Thread Local 
+16) Cyclic Barrier
+17) Countdown Latch
+18) Semaphores
+19) Reentrat Lock
+
+# Immutability
+1) How to create Immutable Class?
+2) Advantages of Immutable classes?
+
+#String Handling
+1) Why string is immutable
+2) Difference between String s = new String("abc") and String s = "abc"
+3) StringBuffer and String Builder
+4) String inbuilt methods - indexOf, lastIndexOf, split, intern, join, concat, replace, replaceAll, startsWith, valueOf, toUpper, toLower, getChars, getBytes
+
+#Collections API
+
+1) Difference between Linked List and ArrayList?
+2) Internal working of HashMap ?
+3) How buckets are maintained in Hashmap when hascode could be a large value
+4) Implementation of 
+
+    (a) ArrayList
+    (b) LinkedList
+    (c) HashMap
+    (d) HashSet
+    (e) TreeMap
+    (f) TreeSet
+
+5) What is concurrentHashMap?
+6) Hierarchy Of Collections API.
+
+
+# Serialization 
+1) Why Serialization is used?
+2) What is Serial Version UID?
+3) Serialization in case of inheritance and composition
+4) Externalizable Interface
+5) What is Marker Interface?
+
+
+#OOPS Concept
+
+1) Inheritance, Encapsulation, Abstraction, Polymorphism, Aggregation. composition
+2) Difference between abstract class and interface and explain when to use what with example?
+3) Method Overriding & Overloading Scenarios, Covariant Return type.
+
+
+#Reflection API & JVM, 
+1) Different ways of creating Objects
+2) class.forName
+3) Java Memory Model 
+4) Garbage Collection - finalize() method, Runtime.gc()
+5) JVM , JDK and JRE 
+6) Types of class loaders
+
+# Design Patterns
+
+1) Singleton Pattern? Can we destroy singleton patterns and how?
+2) Factory Pattern - Definition
+3) Abstract Factory Pattern - Definition and difference with factory pattern.
+
+
