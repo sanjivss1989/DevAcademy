@@ -1,0 +1,32 @@
+Java 8
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   .recommenders/caches/identified-project-coordinates.json
+#	new file:   .recommenders/caches/manual-mappings.json
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.fdt
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.fdx
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.fnm
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.frq
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.nrm
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.prx
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.tii
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/_2.tis
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/segments.gen
+#	new file:   .recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/segments_3
+#	new file:   JavaBrushUp.txt
+#	new file:   JavaPractice/.classpath
+#	new file:   JavaPractice/.gitignore
+#	new file:   JavaPractice/.project
+#	new file:   JavaPractice/.settings/org.eclipse.jdt.core.prefs
+#	new file:   JavaPractice/src/com/sanjib/concepts/ArrayListImplementation.java
+#	new file:   JavaPractice/src/com/sanjib/concepts/SortingService.java
+#	new file:   JavaPractice/src/com/sanjib/concepts/ThreadLocalTest.java
+#	modified:   currency-exchange-service/src/main/java/com/devacademy/appsdemo/currencyexchangeservice/bean/ExchangeValue.java
+#	modified:   currency-exchange-service/src/main/java/com/devacademy/appsdemo/currencyexchangeservice/controller/CurrencyExchangeController.java
+#
